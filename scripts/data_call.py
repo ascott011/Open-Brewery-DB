@@ -16,7 +16,7 @@ def fetch_brewery_data():
             if not os.path.exists('../data'):
                 os.makedirs('../data')
 
-            with open('data/brewery_data.json', 'w') as file:
+            with open('../data/brewery_data.json', 'w') as file:
                 json.dump(data, file, indent=2)
             
             print('Data retrieved successfully.')
