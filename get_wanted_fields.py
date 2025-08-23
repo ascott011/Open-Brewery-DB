@@ -10,7 +10,7 @@ def get_wanted_fields():
 
         if response.status_code == 200:
             data = response.json()
-        
+            #get the keys from the first item in the list
             if isinstance(data, list) and len(data) > 0:
                 first_item = data[0]
                 keys = list(first_item.keys())
@@ -27,6 +27,4 @@ def get_wanted_fields():
 if __name__ == "__main__":
     fields = get_wanted_fields()
     print(fields)
-
-        # wanted_fields = ['id', 'name', 'brewery_type', 'city', 'state', 'postal_code', 'country']
-        # filtered_data = [for key in wanted_fields if key in first_item]
+    
